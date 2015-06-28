@@ -19,9 +19,9 @@
   		var options = JSON.parse(decodeURIComponent(location.hash.slice(1)));
 
       var telInput = document.getElementById('mynumber');
-      telInput.value = options.callNumber || '';
+      telInput.value = options.call || '';
       telInput.addEventListener('input',function(evt){
-      	options.callNumber = telInput.value;
+      	options.call = telInput.value;
       });
 
       document.getElementById('save')
