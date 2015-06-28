@@ -4,6 +4,10 @@ body {
 	align-items: stretch;
 }
 
+select {
+	width: 100%;
+}
+
 .pair {
 	padding: 8px;
 	flex: none;
@@ -21,9 +25,14 @@ body {
   flex: 1;
 }
 
-.level {
+.levels {
 	flex: none;
 	margin: 8px;
+}
+
+.numList{
+	margin: 8px;
+	text-align: center;
 }
 
 .open-space {
@@ -45,6 +54,7 @@ body {
 
 .submitButton {
 	flex: none;
+	margin: 8px;
 	height: 30px;
 	background: #4b4;
 	text-transform: uppercase;
