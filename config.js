@@ -113,6 +113,14 @@ function addLevel() {
   levelContainer.insertBefore(thisLevelContainer, addLevelButton);
 }
 
+for (var i=0; i<recipients.length; i++) {
+  addRecip();
+}
+
+for (var i=0; i<levels.length; i++) {
+  addLevel();
+}
+
 document.getElementById('save')
   .addEventListener('click', function (evt) {
     document.location = 'pebblejs://close#' +
