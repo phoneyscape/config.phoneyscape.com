@@ -9,63 +9,22 @@
 
   <body>
     <div class="pair">
-      	<label for="mynumber">Your number: </label>
-      	<input type="tel" id="mynumber">
+      <label for="mynumber">Your number: </label>
+      <input type="tel" id="mynumber">
     </div>
 
-    <div class="pair">
-    	<label for="theirnumber">Number to enter: </label>
-    	<input type="tel" id="theirnumber">
+    <div id="recips" class="open-space">
+      <button type="button" class="add-level" id="addrecip">
+        Add Contact
+      </button>
     </div>
 
-    <div id="levels" class="pair">
-    	<label for="theirlevel">Priority level: </label>
-    	<select id="theirlevel">
-    		<option value="0">0</option>
-    		<option value="1">1</option>
-    		<option value="2">2</option>
-    	</select>
-    </div>
-
-<!--
     <div id="levels" class="open-space">
-    	<button type="button" class="add-level">Add Level</button>
+      <button type="button" class="add-level" id="addlevel">Add Level</button>
     </div>
--->
+
     <button class="submitButton" type="button" id="save">Save</button>
 
-    <div class="numList">
-    	<h3>Stored numbers</h3>
-    </div>
-
-    <script>
-      var hash = location.hash.slice(1);
-      var options;
-      if (hash) {
-        options = JSON.parse(decodeURIComponent(hash));
-      } else {
-        console.log("You don't appear to be running PebbleJS, that's cool");
-      	options = {};
-      }
-
-      var telInput = document.getElementById('mynumber');
-      telInput.value = options.call || '';
-      telInput.addEventListener('input',function(evt){
-        options.call = telInput.value;
-      });
-
-      var friendInput = document.getElementById('theirnumber');
-      friendInput.addEventListener('input', function(evt){
-      	
-      });
-
-      var lvlInput = document.getElementById('theirlevel');
-
-      document.getElementById('save')
-        .addEventListener('click', function (evt) {
-          document.location = 'pebblejs://close#' +
-            encodeURIComponent(JSON.stringify(options));
-      });
-    </script>
+    <script src="config.js"></script>
   </body>
 </html>
