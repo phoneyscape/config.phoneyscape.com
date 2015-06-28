@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Phonyscape Config</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css">
-		<link rel="stylesheet" href="style.css" type="text/css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-	</head>
+  <head>
+    <title>Phonyscape Config</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+  </head>
 
-	<body>
-		<div class="pair">
-			<label for="mynumber">Number to call:</label>
-			<input type="tel" id="mynumber">
-		</div>
-		<div id="levels" class="open-space">
-		<button type="button" class="add-level">Add Level</button>
-		</div>
-		<button class="submitButton" type="button" id="save">Save</button>
+  <body>
+    <div class="pair">
+      <label for="mynumber">Number to call:</label>
+      <input type="tel" id="mynumber">
+    </div>
+    <div id="levels" class="open-space">
+    <button type="button" class="add-level">Add Level</button>
+    </div>
+    <button class="submitButton" type="button" id="save">Save</button>
 
-		<script>
-		  var hash = location.hash.slice(1);
-  		var options;
-  		if (hash) {
-  			options = JSON.parse(decodeURIComponent(hash));
-  		} else {
-  		  console.log("You don't appear to be running PebbleJS, that's cool");
-  		}
+    <script>
+      var hash = location.hash.slice(1);
+      var options;
+      if (hash) {
+        options = JSON.parse(decodeURIComponent(hash));
+      } else {
+        console.log("You don't appear to be running PebbleJS, that's cool");
+      }
 
       var telInput = document.getElementById('mynumber');
       telInput.value = options.call || '';
       telInput.addEventListener('input',function(evt){
-      	options.call = telInput.value;
+        options.call = telInput.value;
       });
 
       document.getElementById('save')
         .addEventListener('click', function (evt) {
-      	  document.location = 'pebblejs://close#' +
-      		  encodeURIComponent(JSON.stringify(options));
+          document.location = 'pebblejs://close#' +
+            encodeURIComponent(JSON.stringify(options));
       });
     </script>
-	</body>
+  </body>
 </html>
