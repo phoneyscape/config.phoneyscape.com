@@ -30,14 +30,14 @@ body {
 	flex: 1;
 	display: flex;
 	flex-flow: column;
-	align-items: center;
+	align-items: stretch;
 }
 
 .add-level {
 	flex: none;
 	margin: 8px;
 	height: 40px;
-	background: #bb4;
+	background: #b84;
 	text-transform: uppercase;
 	color: white;
 	border: none;
