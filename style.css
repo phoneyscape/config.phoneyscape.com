@@ -1,0 +1,13 @@
+body {
+	text-align:center;
+}
+
+.numLabel {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.submitButton {
+	width: 125px;
+	height: 30px;
+}

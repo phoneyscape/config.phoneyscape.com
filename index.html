@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-<label for="mynumber">My number</label> <input type="tel" id="mynumber" >
-<button type="button" id="save">Save</button>
-<script>
-var options = JSON.parse(decodeURIComponent(location.hash.slice(1)));
+	<head>
+		<title>Phonyscape Config</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
 
-var telInput = document.getElementById('tel');
-telInput.value = options.callNumber;
-telInput.addEventListener('input',function(evt){
-  options.callNumber = telInput.value;
-});
+	<body>
+		<div class="numLabel">
+			<label for="mynumber">My number</label>
+			<input type="tel" id="mynumber">
+		</div>
 
-document.getElementById('save').addEventListener('click', function (evt) {
-  location.href = 'pebblejs://close#' +
-    encodeURIComponent(JSON.stringify(options));
-});
-</script>
-</body>
+		<button class="submitButton" type="button" id="save">Save</button>
+		
+		<script>
+			var options = JSON.parse(decodeURIComponent(location.hash.slice(1)));
+
+			var telInput = document.getElementById('tel');
+			telInput.value = options.callNumber;
+			telInput.addEventListener('input',function(evt){
+				options.callNumber = telInput.value;
+			});
+
+			document.getElementById('save').addEventListener('click', function (evt) {
+	  			location.href = 'pebblejs://close#' +
+	    		encodeURIComponent(JSON.stringify(options));
+			});	
+		</script>
+	</body>
 </html>
