@@ -24,6 +24,7 @@
         options = JSON.parse(decodeURIComponent(hash));
       } else {
         console.log("You don't appear to be running PebbleJS, that's cool");
+      	options = {};
       }
 
       var telInput = document.getElementById('mynumber');
