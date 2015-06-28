@@ -6,7 +6,7 @@
 <label for="mynumber">My number</label> <input type="tel" id="mynumber" >
 <p id="rq">Require:</p>
 <p id="ss">Settings:</p>
-<p id="consolish"></p>
+<p id="consolish">Moar:</p>
 <script>
 document.getElementById('rq').textContent+=typeof require;
 document.getElementById('ss').textContent+=typeof Settings;
@@ -14,6 +14,7 @@ for (var i = 0; i < localStorage.length; i++) {
   var key = localStorage.key(i);
   document.getElementById('consolish').textContent+=JSON.stringify(key)+', '+ JSON.stringify(localStorage.getItem(key))+'\n';
 }
+  document.getElementById('consolish').textContent+='word'
 </script>
 </body>
 </html>
