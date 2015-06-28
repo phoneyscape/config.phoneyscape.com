@@ -11,7 +11,6 @@
 			<label for="mynumber">My number: </label>
 			<input type="tel" id="mynumber">
 		</div>
-		<div id="yo">oh no it's devo</div>
 
 		<button class="submitButton" type="button" id="save">Save</button>
 
@@ -26,7 +25,6 @@
 
       document.getElementById('save')
         .addEventListener('click', function (evt) {
-          document.getElementById('yo').textContent+=' yo ho ho';
       	  document.location = 'pebblejs://close#' +
       		  encodeURIComponent(JSON.stringify(options));
       });
