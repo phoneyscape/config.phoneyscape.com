@@ -7,9 +7,9 @@ if (hash) {
   options = {};
 }
 
-var levels = [];
+var levels = options.levels || [];
 options.levels = levels;
-var recipients = [];
+var recipients = options.recipients || [];
 options.recipients = recipients;
 
 var telInput = document.getElementById('mynumber');
