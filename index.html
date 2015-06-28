@@ -10,11 +10,11 @@
 <script>
 document.getElementById('rq').textContent+=typeof require;
 document.getElementById('ss').textContent+=typeof Settings;
-for (var i = 0; i < localStorage.length; i++) {
-  var key = localStorage.key(i);
-  document.getElementById('consolish').textContent+=JSON.stringify(key)+', '+ JSON.stringify(localStorage.getItem(key))+'\n';
-}
-  document.getElementById('consolish').textContent+='word'
+// for (var i = 0; i < localStorage.length; i++) {
+//   var key = localStorage.key(i);
+//   document.getElementById('consolish').textContent+=JSON.stringify(key)+', '+ JSON.stringify(localStorage.getItem(key))+'\n';
+// }
+document.getElementById('consolish').textContent=location.hash;
 </script>
 </body>
 </html>
