@@ -15,7 +15,13 @@
 		<button class="submitButton" type="button" id="save">Save</button>
 
 		<script>
-  		var options = JSON.parse(decodeURIComponent(location.hash.slice(1)));
+		  var hash = location.hash.slice(1);
+  		var options;
+  		if (hash) {
+  			options = JSON.parse(decodeURIComponent(hash));
+  		} else {
+  		  console.log("You don't appear to be running PebbleJS, that's cool");
+  		}
 
       var telInput = document.getElementById('mynumber');
       telInput.value = options.call || '';
