@@ -1,13 +1,53 @@
 body {
-	text-align:center;
+	display: flex;
+	flex-flow: column;
+	align-items: stretch;
 }
 
-.numLabel {
-	padding-top: 25px;
-	padding-bottom: 25px;
+.pair {
+	padding: 8px;
+	flex: none;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.pair label {
+  padding-right: 8px;
+}
+
+.pair input {
+  flex: 1;
+}
+
+.level {
+	flex: none;
+	margin: 8px;
+}
+
+.open-space {
+	flex: 1;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.add-level {
+	flex: none;
+	margin: 8px;
+	height: 40px;
+	background: #bb4;
+	text-transform: uppercase;
+	color: white;
+	border: none;
 }
 
 .submitButton {
-	width: 125px;
+	flex: none;
 	height: 30px;
+	background: #4b4;
+	text-transform: uppercase;
+	color: white;
+	border: none;
 }
