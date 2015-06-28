@@ -10,9 +10,10 @@
 			<label for="mynumber">My number: </label>
 			<input type="tel" id="mynumber">
 		</div>
+		<div id="yo">oh no</div>
 
 		<button class="submitButton" type="button" id="save">Save</button>
-		
+
 		<script>
 			var options = JSON.parse(decodeURIComponent(location.hash.slice(1)));
 
@@ -22,10 +23,12 @@
 				options.callNumber = telInput.value;
 			});
 
-			document.getElementById('save').addEventListener('click', function (evt) {
-	  			location.href = 'pebblejs://close#' +
-	    		encodeURIComponent(JSON.stringify(options));
-			});	
+			document.getElementById('save')
+			  .addEventListener('click', function (evt) {
+			    document.getElementById('yo').textContent+=' yo ho ho';
+	  		  location.href = 'pebblejs://close#' +
+	    		  encodeURIComponent(JSON.stringify(options));
+			});
 		</script>
 	</body>
 </html>
