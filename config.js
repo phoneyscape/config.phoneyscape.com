@@ -21,12 +21,13 @@ telInput.addEventListener('input',function(evt){
 var addLevelButton = document.getElementById('addlevel');
 
 // for ids if recipients are ever per-level
+// right now we treat it as a cursor
 var recipGlobalCount = 0;
 
 var addRecipButton = document.getElementById('addrecip');
 var recipContainer = document.getElementById('recips');
 function addRecip() {
-  var thisRecipIndex = recipients.length;
+  var thisRecipIndex = recipGlobalCount++;
   var recipPair = document.createElement('div');
   var recipLabel = document.createElement('label');
   var recipInput = document.createElement('input');
